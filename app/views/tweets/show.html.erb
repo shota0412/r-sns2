@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-7 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <%= image_tag attachment_url(@user, :profile_image, :fill, 150, 100, format: "jpg", fallback: "no-image.png") %>
+
+          <h5 class="card-title">
+            <%= @tweet.user.username %>
+          </h5>
+
+          <h6 class="card-subtitle mb-2 text-muted"><%= simple_format @tweet.text %></h6>
+          <%= attachment_image_tag @tweet, :image %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
