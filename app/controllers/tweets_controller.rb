@@ -24,6 +24,6 @@ class TweetsController < ApplicationController
   end
 
   def set_tweet
-    @tweet = Tweet.find(params[:tweets_id])
+    @tweet = Tweet.find(params[:id])
   end
 end
